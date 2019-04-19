@@ -1,3 +1,5 @@
+[![Documentation Status](https://readthedocs.org/projects/force-field-fitting-tools/badge/?version=latest)](https://force-field-fitting-tools.readthedocs.io/en/latest/?badge=latest)
+
 # Requirements
 - C++ compiler supporting C++ 2011
 
