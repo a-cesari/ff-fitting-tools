@@ -1,5 +1,8 @@
+On-th-fly
+=========
+
 Sample PLUMED input file for AAAA tetranucleotide
-=================================================
+-------------------------------------------------
 
 This sample plumed.dat file can be used to apply the fitted corrections,
 on-the-fly, durin a MD simulation. ## Apply Corrections during
@@ -19,3 +22,10 @@ Fitted parameters
 
 They are specified at the end of the gen_bias.sh script and are
 identified with ``lag[1], lag[2]``, etc.
+
+By reweighting
+==============
+
+TODO
+----
+-
