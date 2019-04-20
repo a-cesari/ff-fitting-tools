@@ -1,0 +1,41 @@
+First steps
+-----------
+
+Are you new to software documentation
+or are you looking to use your existing docs with Read the Docs?
+Learn about documentation authoring tools such as Sphinx and MkDocs
+to help you create fantastic documentation for your project.
+
+* **Getting started**:
+  :doc:`With Sphinx <intro/getting-started-with-sphinx>` |
+  :doc:`With MkDocs <intro/getting-started-with-mkdocs>`
+
+* **Importing your existing documentation**:
+  :doc:`Import guide <intro/import-guide>`
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: First Steps
+
+   intro/getting-started-with-sphinx
+   intro/getting-started-with-mkdocs
+   intro/import-guide
+
+
+.. _user-docs:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: User Documentation
+
+   versions
+   builds
+   features
+   connected-accounts
+   support
+   faq
+   config-file/index
+   guides/index
+   api/index
+   embed

@@ -1,0 +1,15 @@
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: First Steps
+
+   fit/fit_corrections
+
+
+.. _user-docs:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: User Documentation
+
+   apply/apply_corrections

@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Fit data and find corrections &#8212; Force Field fitting tools latest documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Sample PLUMED input file for AAAA tetranucleotide" href="../apply/apply_corrections.html" />
+    <link rel="prev" title="Requirements" href="../installation.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="fit-data-and-find-corrections">
+<h1>Fit data and find corrections<a class="headerlink" href="#fit-data-and-find-corrections" title="Permalink to this headline">¶</a></h1>
+<p>In this section it is explained how this tools can be used to fit ensamble averages and derive corretions that can be then used either on-the-fly or by reweighting.
+See apply corrections section.</p>
+<div class="section" id="prepare-colvar-files">
+<h2>Prepare colvar files<a class="headerlink" href="#prepare-colvar-files" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Compile file2bin.cpp present in src folder with:
+<code class="docutils literal notranslate"><span class="pre">g++</span> <span class="pre">-O2</span> <span class="pre">../src/file2bin.cpp</span> <span class="pre">-o</span> <span class="pre">file2bin.x</span></code></p></li>
+<li><p>Convert text files into binary ones and add number of rows and number
+of columns as first row. On each colvar file run:
+<code class="docutils literal notranslate"><span class="pre">./convert.sh</span> <span class="pre">colvar_filename</span></code></p></li>
+<li><p>New files, to be used in the input file, will be named as
+<code class="docutils literal notranslate"><span class="pre">colvar_filename_new.bin</span></code></p></li>
+</ul>
+<p><strong>NOTE</strong>: For storage reasons, each file present in colvar folder is
+just a sub-sample of the original ones used in the paper.</p>
+</div>
+<div class="section" id="run-the-fitting-procedure">
+<h2>Run the fitting procedure<a class="headerlink" href="#run-the-fitting-procedure" title="Permalink to this headline">¶</a></h2>
+<p>Once all the colvar files have been converted into binary ones, copy the
+<code class="docutils literal notranslate"><span class="pre">fit.x</span></code> program from <code class="docutils literal notranslate"><span class="pre">src</span></code> directory in the current one and run:
+<code class="docutils literal notranslate"><span class="pre">./fit.x</span> <span class="pre">&lt;</span> <span class="pre">input</span></code></p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Force Field fitting tools</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html#install">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html#structure">Structure</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Fit Corrections</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Fit data and find corrections</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prepare-colvar-files">Prepare colvar files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#run-the-fitting-procedure">Run the fitting procedure</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Apply Corrections</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../apply/apply_corrections.html">Sample PLUMED input file for AAAA tetranucleotide</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../installation.html" title="previous chapter">Requirements</a></li>
+      <li>Next: <a href="../apply/apply_corrections.html" title="next chapter">Sample PLUMED input file for AAAA tetranucleotide</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Andrea Cesari.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/fit/fit_corrections.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
